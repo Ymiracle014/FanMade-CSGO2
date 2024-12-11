@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+	
+    <style>
+    body {
+        background-image: url('W3.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: background-image 2s ease-in-out;
+    }
+
+    .new-background {
+        background-image: url('W3.gif');
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul a {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+        word-spacing: 15px;
+    }
+
+    nav ul a:hover {
+        background-color: rgba(0, 0, 0, 0.5); 
+        border-radius: 10px;
+    }
+
+        .transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .transition-active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        body {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+</style>
+
+<body>
+	<div class="transition"></div>
+    <header>
+        <h1>About CSGO 2</h1>
+		<Body Background="W3.gif">
+		<style>
+        body {
+            background-image: url('W3.gif'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            background-position: center center;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+         footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+    </style>
+	
+        <nav>
+            <ul>
+                <a href="HomePage.html">Home</a>
+                <a href="AboutPage.html">About</a>
+                <a href="GalleryAndContactPage.html">Gallery and Contact</a>
+                <a href="RecentTravelPage.html">Recent Travels</a>
+                <a href="Holiday2024Page.html">Holiday Tournament Events 2024</a>
+            </ul>
+        </nav>
+    </header>
+
+     <main>
+        <h2 style="text-align: center;">Who We Are</h2>
+        <p style="text-align: center;">The sequel to a legacy, CS:GO 2 redefines tactical FPS gaming with stunning visuals, revamped mechanics,and enhanced maps that bring your <br>
+		favorite arenas to life. Whether you're a seasoned player or a newcomer, our mission is to provide an unparalleled competitive experience. <br>
+		Learn more about the journey of CS:GO, its evolution, and the vision that drives us to push the boundaries of gaming."</p>
+    </main>
+
+	<h1><center>CSGO 2 Gameplay Gallery</center></h1>
+    <main>
+        <div class="gallery">
+            <center><img src="CS1.jpg" alt="Travel photo 1">
+            <img src="CS2.jpg" alt="Travel photo 2">
+            <img src="CS3.jpg" alt="Travel photo 3"></center>
+        </div>
+    </main>
+
+    <footer> 
+        <p>&copy; 2024 Fan-made CSGO 2 Site. <a href="https://www.counter-strike.net/">Visit Official Site</a></p>
+    </footer>
+	
+	<script>
+        window.onload = () => {
+            document.body.style.opacity = 1;
+        };
+
+        const links = document.querySelectorAll("a");
+        const transition = document.querySelector(".transition");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const href = link.getAttribute("href");
+
+                transition.classList.add("transition-active");
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); 
+            });
+        });
+    </script>
+	
+</body>
+</html>

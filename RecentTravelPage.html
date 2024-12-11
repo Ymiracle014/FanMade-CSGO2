@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecentTravel</title>
+	
+    <style>
+    /* General Styles */
+    body {
+        background-image: url('W6.gif');
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        color: white; 
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: background-image 2s ease-in-out;
+    }
+
+    .new-background {
+        background-image: url('W6.gif');
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul a {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+        word-spacing: 15px;
+    }
+
+    nav ul a:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+        .transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .transition-active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        body {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+		
+	</style>
+
+<body>
+	<div class="transition"></div>
+    <header>
+        <h1>Recent Travels in CSGO 2</h1>
+		<Body Background="Wall2.gif">
+		<style>
+        /* General styling for the body */
+        body {
+            background-image: url('W6.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            bottom: 0;
+            width: 98.95%;
+			max-width: 100%;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+    </style>
+	
+        <nav>
+            <ul>
+                <a href="HomePage.html">Home</a>
+                <a href="AboutPage.html">About</a>
+                <a href="GalleryAndContactPage.html">Gallery and Contact</a>
+                <a href="RecentTravelPage.html">Recent Travels</a>
+                <a href="Holiday2024Page.html">Holiday Tournament Events 2024</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center;">Our Latest Adventures</h2>
+        <p style="text-align: center;">The battlefield constantly evolves, and so do the players who brave it. In this section, explore the latest tournaments,<br>
+		community events, and professional leagues that highlight the global journey of CS:GO 2. Relive epic moments from <br>
+		the most recent matches and stay updated with travel-inspired map overhauls that bring new challenges to old favorites."</p>
+		<br>
+        <h2 style="text-align: center; color: white;">Recent Places</h2>
+        <p style="text-align: center; color: white;">Asia</p>
+		<p style="text-align: center; color: white;">Europe</p>
+		<p style="text-align: center; color: white;">China</p>
+		<p style="text-align: center; color: white;">North America</p>
+		<p style="text-align: center; color: white;">Bucharest</p>
+		<p style="text-align: center; color: white;">Astana</p>
+		<p style="text-align: center; color: white;">United Kingdom</p>
+		<p style="text-align: center; color: white;">Shanghai</p>
+		<p style="text-align: center; color: white;">Budapest</p>
+	</main>
+
+    <footer>
+        <p>&copy; 2024 Fan-made CSGO 2 Site. <a href="https://www.counter-strike.net/">Visit Official Site</a></p>
+    </footer>
+
+	<script>
+        window.onload = () => {
+            document.body.style.opacity = 1;
+        };
+
+        const links = document.querySelectorAll("a");
+        const transition = document.querySelector(".transition");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const href = link.getAttribute("href");
+
+                transition.classList.add("transition-active");
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500);
+            });
+        });
+		
+			window.onload = () => {
+			document.body.style.opacity = 1;
+			setTimeout(() => {
+				document.body.classList.add('new-background');
+			}, 2000);
+		};
+
+		const links = document.querySelectorAll("a");
+		const transition = document.querySelector(".transition");
+
+		links.forEach(link => {
+			link.addEventListener("click", e => {
+				e.preventDefault();
+				const href = link.getAttribute("href");
+
+				transition.classList.add("transition-active");
+
+				setTimeout(() => {
+					window.location.href = href;
+				}, 500);
+			});
+		});
+    </script>
+	
+</body>
+</html>

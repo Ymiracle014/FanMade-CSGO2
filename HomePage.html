@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+	
+    <style>
+    body {
+        background-image: url('W1.gif');
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: background-image 2s ease-in-out; 
+    }
+
+    .new-background {
+        background-image: url('W1.gif');
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul a {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+        word-spacing: 15px;
+    }
+
+    nav ul a:hover {
+        background-color: rgba(0, 0, 0, 0.5); 
+        border-radius: 10px;
+    }
+
+	 /* Page Transition */
+        .transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .transition-active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Optional: Make body fade-in when loading */
+        body {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+		
+	</style>
+
+<body>
+	<div class="transition"></div>
+    <header>
+        <h1>Welcome to CSGO 2</h1>
+		<Body Background="W1.gif">
+		<style>
+        body {
+            background-image: url('W1.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-position: center center; 
+            color: white; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            bottom: 0;
+			width: 98.95%;
+			max-width: 100%;
+
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+    </style>
+	
+        <nav>
+            <ul>
+                <a href="HomePage.html">Home</a>
+                <a href="AboutPage.html">About</a>
+                <a href="GalleryAndContactPage.html">Gallery and Contact</a>
+                <a href="RecentTravelPage.html">Recent Travels</a>
+                <a href="Holiday2024Page.html">Holiday Tournament Events 2024</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+		<br>
+		<br>
+        <h2 style="text-align: center; color: white;">Redefining the Tactical Shooter Experience</h2>
+        <p style="text-align: center; color: white;">"Welcome to the ultimate Counter-Strike experience! Dive into the immersive world of CS:GO 2, where tactics meet precision and every moment is a test of skill. <br>
+		Here, you'll find the latest updates, insider tips, and a community of players passionate about mastering the art of battle. <br>
+		Explore our site to discover what makes CS:GO 2 the next evolution in tactical gameplay."</p>
+		<br>
+		<iframe width="800" height="450" src="https://www.youtube.com/embed/c80dVYcL69E" title="Counter-Strike 2 - Official Launch Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</video>
+	</main>
+
+    <footer>
+        <p>&copy; 2024 Fan-made CSGO 2 Site. <a href="https://www.counter-strike.net/">Visit Official Site</a></p>
+    </footer>
+
+	<script>
+        window.onload = () => {
+            document.body.style.opacity = 1;
+        };
+
+        const links = document.querySelectorAll("a");
+        const transition = document.querySelector(".transition");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const href = link.getAttribute("href");
+
+                transition.classList.add("transition-active");
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500);
+            });
+        });
+		
+			window.onload = () => {
+			document.body.style.opacity = 1;
+			setTimeout(() => {
+				document.body.classList.add('new-background');
+			}, 2000); 
+		};
+
+		const links = document.querySelectorAll("a");
+		const transition = document.querySelector(".transition");
+
+		links.forEach(link => {
+			link.addEventListener("click", e => {
+				e.preventDefault();
+				const href = link.getAttribute("href");
+
+				transition.classList.add("transition-active");
+
+				setTimeout(() => {
+					window.location.href = href;
+				}, 500);
+			});
+		});
+    </script>
+	
+</body>
+</html>
